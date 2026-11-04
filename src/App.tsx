@@ -1,15 +1,18 @@
+import { Route, Routes } from "react-router-dom";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import Home from "./pages/home/Home";
+import ListaProdutos from "./pages/listaProdutos/ListaProdutos";
 
-import './App.css'
-
-function App() {
-  
-
-  return (
-    <>
-    <h1>Hello World!!!</h1>
-    <p>Aplicação funcionando!</p>
-    </>
-   )
+export default function App() {
+    return (
+        <>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/produtos" element={<ListaProdutos/>}/>
+            </Routes>
+            <Footer />
+        </>
+    )
 }
-
-export default App
