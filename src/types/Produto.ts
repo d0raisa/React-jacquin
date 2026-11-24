@@ -1,4 +1,4 @@
-export type Produtos = {
+export type Produto = {
     id: number;
     nome: string;
     descricaoCurta: string;
@@ -8,3 +8,5 @@ export type Produtos = {
     imagem: string;
     categoriaIds: number[]
 }
+
+export type ProdutoRequest = Omit<Produto, 'id'>
